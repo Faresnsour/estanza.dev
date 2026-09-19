@@ -152,8 +152,8 @@ export default function TermsPage() {
               <br />
               Online business
               <br />
-              <a className="text-primary underline underline-offset-4" href="mailto:privacy@estanza.dev">
-                privacy@estanza.dev
+              <a className="text-primary underline underline-offset-4" href="mailto:hello@estanza.dev">
+                hello@estanza.dev
               </a>
             </p>
           </TermsSection>

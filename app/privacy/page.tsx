@@ -118,8 +118,8 @@ export default function PrivacyPolicyPage() {
             </ul>
             <p>
               To exercise these rights, contact us at{' '}
-              <a className="text-primary underline underline-offset-4" href="mailto:privacy@estanza.dev">
-                privacy@estanza.dev
+              <a className="text-primary underline underline-offset-4" href="mailto:hello@estanza.dev">
+                hello@estanza.dev
               </a>
               .
             </p>
@@ -154,8 +154,8 @@ export default function PrivacyPolicyPage() {
               <br />
               Online business
               <br />
-              <a className="text-primary underline underline-offset-4" href="mailto:privacy@estanza.dev">
-                privacy@estanza.dev
+              <a className="text-primary underline underline-offset-4" href="mailto:hello@estanza.dev">
+                hello@estanza.dev
               </a>
             </p>
           </PolicySection>
