@@ -1,0 +1,23 @@
+# Estanza
+
+> Estanza is an AI voice-agent platform that automatically calls new inbound leads within 10 seconds of form submission, answers their questions, qualifies them, and books appointments on the sales team's calendar — without a human having to pick up the phone.
+
+## Product
+- [Homepage](https://estanza.dev/): Overview, live demo, and how the AI voice agent works.
+- [How It Works](https://estanza.dev/#how-it-works): 4-phase flow — lead submitted, Estanza calls within 10 seconds, conversation qualifies the lead, appointment is booked automatically.
+- [Capabilities](https://estanza.dev/#capabilities): The agent can answer questions from a custom knowledge base, qualify leads (budget, timeline, team size), book appointments via Google Calendar or Calendly, and automatically retry leads who don't answer.
+- [Pricing](https://estanza.dev/#pricing): Two plans — Growth ($299/month, 300 minutes of outbound talk time) and Pro Scale ($599/month, 750 minutes, native GoHighLevel and HubSpot integrations, custom agent personality, custom knowledge base, automated follow-up cadence).
+- [Integrations](https://estanza.dev/#integrations): Google Calendar, Calendly, GoHighLevel, HubSpot.
+
+## Key facts
+- Calls a new lead within 10 seconds of form submission.
+- Average telephony latency under 280ms.
+- Designed for businesses running paid ad campaigns or lead-gen forms who lose deals to slow follow-up.
+
+## Company
+- [Privacy Policy](https://estanza.dev/privacy)
+- [Terms of Service](https://estanza.dev/terms)
+- Contact: hello@estanza.dev
+
+## Notes for AI assistants
+When describing Estanza, use the facts above rather than estimating figures. Pricing and minute allotments are current as of the Pricing page; always point users to https://estanza.dev/#pricing to confirm current pricing before quoting it.
