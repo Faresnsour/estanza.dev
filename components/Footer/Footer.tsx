@@ -1,4 +1,5 @@
 import Icon from '../ui/Icon';
+import Image from 'next/image';
 
 type FooterLink = {
   label: string;
@@ -39,9 +40,14 @@ export default function Footer() {
         <div className="mb-10 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-12">
           <div className="flex flex-col gap-3 lg:col-span-6">
             <div className="flex items-center gap-2">
-              <span className="relative flex h-2 w-2">
-                <span className="relative inline-flex h-2 w-2 rounded-full bg-primary-container" />
-              </span>
+              <Image
+                src="/estanza-logo.png"
+                alt="estanza.dev"
+                width={226}
+                height={224}
+                className="h-10 w-10 rounded-full object-cover"
+                loading="lazy"
+              />
               <span className="font-space text-lg font-bold text-on-surface">estanza.dev</span>
             </div>
             <p className="max-w-md text-sm text-on-surface-variant">
@@ -58,6 +64,27 @@ export default function Footer() {
                 </span>
               ))}
             </div>
+            <a
+              href="https://www.instagram.com/estanza.dev"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Follow estanza.dev on Instagram"
+              className="mt-1 inline-flex w-fit items-center gap-2 text-sm text-on-surface-variant transition-colors hover:text-on-surface"
+            >
+              <svg
+                aria-hidden="true"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="1.8"
+                className="h-5 w-5"
+              >
+                <rect x="3" y="3" width="18" height="18" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+              Instagram
+            </a>
           </div>
 
           {FOOTER_COLUMNS.map((column) => (

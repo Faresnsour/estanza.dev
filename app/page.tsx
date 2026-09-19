@@ -31,7 +31,7 @@ export default function LandingPage() {
                 '@id': 'https://estanza.dev/#organization',
                 name: 'Estanza',
                 url: 'https://estanza.dev/',
-                logo: 'https://estanza.dev/favicon.ico',
+                logo: 'https://estanza.dev/estanza-logo.png',
               },
               {
                 '@type': 'WebSite',

@@ -90,7 +90,7 @@ function PlanCard({ plan, onSelect }: { plan: Plan; onSelect?: (planId: PlanId) 
             </h3>
             <p
               className={`mt-1 text-xs ${
-                isFeatured ? 'text-inverse-on-surface/75' : 'text-on-surface-variant'
+                isFeatured ? 'text-inverse-on-surface/85' : 'text-on-surface-variant'
               }`}
             >
               {plan.tagline}
@@ -113,7 +113,7 @@ function PlanCard({ plan, onSelect }: { plan: Plan; onSelect?: (planId: PlanId) 
           </span>
           <span
             className={`text-sm font-medium ${
-              isFeatured ? 'text-inverse-on-surface/70' : 'text-on-surface-variant'
+              isFeatured ? 'text-inverse-on-surface/80' : 'text-on-surface-variant'
             }`}
           >
             / month
@@ -189,7 +189,7 @@ export function FinalCta() {
             <Icon name="arrow_forward" className="text-[20px]" />
           </button>
         </div>
-        <p className="pt-2 font-mono-custom text-xs text-inverse-on-surface/60">
+        <p className="pt-2 font-mono-custom text-xs text-inverse-on-surface/75">
           10-second response · 24/7 · AI voice · Automatic booking
         </p>
       </div>

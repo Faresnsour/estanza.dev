@@ -27,7 +27,7 @@ export default function Hero({ onWatchDemo }: HeroProps) {
           <div className="flex flex-col items-start gap-4 lg:col-span-7">
             <div className="inline-flex items-center gap-2 rounded-full bg-surface-container px-3 py-1 font-mono-custom text-xs text-on-surface shadow-xs">
               <span className="relative flex h-2 w-2">
-                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary-container opacity-75" />
+                <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-primary-container opacity-75 transform-gpu" />
                 <span className="relative inline-flex h-2 w-2 rounded-full bg-primary-container" />
               </span>
               <span>AI VOICE AGENTS · 10-SECOND RESPONSE · AUTOMATIC BOOKING</span>
@@ -98,7 +98,7 @@ function TelephonyConsole() {
 
       <div className="flex items-center justify-between border-b border-white/10 pb-4">
         <div className="flex items-center gap-2">
-          <span className="h-2 w-2 animate-pulse rounded-full bg-primary-container" />
+          <span className="h-2 w-2 animate-pulse rounded-full bg-primary-container transform-gpu" />
           <span className="font-mono-custom text-xs uppercase tracking-wider text-primary-fixed">
             ESTANZA TELEPHONY ENGINE
           </span>
@@ -123,7 +123,7 @@ function TelephonyConsole() {
               Prospect: Marcus Vance (VP Sales)
             </div>
             <div className="flex items-center gap-1 font-mono-custom text-[11px] text-primary-fixed">
-              <span className="inline-block h-1.5 w-1.5 animate-ping rounded-full bg-primary-container" />
+              <span className="inline-block h-1.5 w-1.5 animate-ping rounded-full bg-primary-container transform-gpu" />
               Connected in 00:08s · High-Res Opus HD
             </div>
           </div>
@@ -132,7 +132,7 @@ function TelephonyConsole() {
       </div>
 
       <div className="mb-4 flex flex-col gap-2 rounded-lg border border-white/5 bg-white/5 p-3.5">
-        <div className="flex items-center justify-between font-mono-custom text-[11px] text-inverse-on-surface/70">
+        <div className="flex items-center justify-between font-mono-custom text-[11px] text-inverse-on-surface/80">
           <span>OUTBOUND SIP AUDIO STREAM</span>
           <span className="text-primary-fixed">SYNTHESIZED EMOTION ENGINE</span>
         </div>
@@ -140,9 +140,9 @@ function TelephonyConsole() {
           {WAVEFORM_BARS.map((value, index) => (
             <div
               key={`${value}-${index}`}
-              className="w-1 animate-pulse rounded-full bg-primary-container"
+              className="h-14 w-1 origin-center animate-pulse rounded-full bg-primary-container transform-gpu"
               style={{
-                height: `${value * 0.7}px`,
+                transform: `scaleY(${value / 64})`,
                 animationDelay: `${(index % 4) * 0.2}s`,
               }}
             />
@@ -164,7 +164,7 @@ function TelephonyConsole() {
             </div>
           </div>
         </div>
-        <div className="mt-3 flex items-center justify-between font-mono-custom text-[11px] text-inverse-on-surface/60">
+        <div className="mt-3 flex items-center justify-between font-mono-custom text-[11px] text-inverse-on-surface/75">
           <span className="flex items-center gap-1">
             <span className="h-1.5 w-1.5 rounded-full bg-primary-container" />
             Natural Turn-Taking Active
@@ -173,7 +173,7 @@ function TelephonyConsole() {
         </div>
       </div>
 
-      <div className="mt-4 flex items-center justify-between border-t border-white/5 pt-3 font-mono-custom text-[11px] text-inverse-on-surface/50">
+      <div className="mt-4 flex items-center justify-between border-t border-white/5 pt-3 font-mono-custom text-[11px] text-inverse-on-surface/70">
         <span>CARRIER: GLOBAL TIER-1 PSTN</span>
         <span className="text-primary-fixed">CALENDAR SLOT DETECTED: TOMORROW 2:30 PM</span>
       </div>

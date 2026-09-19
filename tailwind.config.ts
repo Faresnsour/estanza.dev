@@ -30,10 +30,10 @@ const config: Config = {
         xs: '0 1px 2px 0 rgb(0 0 0 / 0.05)',
       },
       fontFamily: {
-        space: ['Space Grotesk', 'sans-serif'],
+        space: ['var(--font-space-grotesk)', 'sans-serif'],
         'body-md': ['Geist', 'sans-serif'],
         'body-lg': ['Geist', 'sans-serif'],
-        'mono-custom': ['JetBrains Mono', 'monospace'],
+        'mono-custom': ['var(--font-jetbrains-mono)', 'monospace'],
       },
     },
   },

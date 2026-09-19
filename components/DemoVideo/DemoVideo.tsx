@@ -72,7 +72,7 @@ export default function DemoVideo({ isPlaying: playingProp, onPlayingChange }: D
       <audio
         ref={audioRef}
         src="/saraEstanzaaiv.mp3"
-        preload="metadata"
+        preload="none"
         onEnded={() => setPlaying(false)}
       />
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -103,7 +103,7 @@ export default function DemoVideo({ isPlaying: playingProp, onPlayingChange }: D
             </div>
             <div className="flex items-center gap-2 font-mono-custom text-sm text-primary-container">
               <span>{formatTime(elapsed)}</span>
-              <span className="text-inverse-on-surface/40">/ 01:15</span>
+              <span className="text-inverse-on-surface/70">/ 01:15</span>
             </div>
           </div>
 
@@ -124,10 +124,10 @@ export default function DemoVideo({ isPlaying: playingProp, onPlayingChange }: D
                 {WAVEFORM_BARS.map((height, index) => (
                   <div
                     key={`${height}-${index}`}
-                    className={`w-1.5 rounded-full bg-primary-container transition-all duration-300 ${
+                    className={`h-16 w-1.5 origin-center rounded-full bg-primary-container transition-transform duration-300 transform-gpu ${
                       isPlaying ? 'animate-pulse' : 'opacity-70'
                     }`}
-                    style={{ height: `${isPlaying ? height : 16}px` }}
+                    style={{ transform: `scaleY(${(isPlaying ? height : 16) / 64})` }}
                   />
                 ))}
               </div>
@@ -157,7 +157,7 @@ export default function DemoVideo({ isPlaying: playingProp, onPlayingChange }: D
                   </span>
                   <span
                     className={`font-mono-custom text-[11px] ${
-                      step.highlighted ? 'text-primary-fixed' : 'text-inverse-on-surface/60'
+                      step.highlighted ? 'text-primary-fixed' : 'text-inverse-on-surface/75'
                     }`}
                   >
                     {step.caption}

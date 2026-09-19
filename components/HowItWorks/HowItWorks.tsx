@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Icon from '../ui/Icon';
 import { useGetStarted } from '../ui/GetStartedProvider';
 
@@ -63,26 +64,25 @@ const INTEGRATIONS: Integration[] = [
     icon: 'calendar_today',
     name: 'Google Calendar',
     description: 'Real-time availability read/write lock',
-    imageUrl: 'https://images.icon-icons.com/2631/PNG/512/google_calendar_new_logo_icon_159141.png',
+    imageUrl: '/integrations/google-calendar.png',
   },
   {
     icon: 'link',
     name: 'Calendly',
     description: 'Instant booking link triggers',
-    imageUrl: 'https://cdn.brandfetch.io/idbJpTKFPT/theme/dark/symbol.svg?c=1dxbfHSJFAPEGdCLU4o5B',
+    imageUrl: '/integrations/calendly.svg',
   },
   {
     icon: 'hub',
     name: 'GoHighLevel',
     description: 'Full agency pipeline sync & logs',
-    imageUrl:
-      'https://assets-developers.ringcentral.com/app/logo/aeXrIvo5HitbUwdPE492E6~V16fa2XU9UHfHQGX0WRcL6/e3613822-6cb4-4e85-ba10-9abcb3782b6b.png',
+    imageUrl: '/integrations/gohighlevel.png',
   },
   {
     icon: 'dataset',
     name: 'HubSpot',
     description: 'Deals, stages, & voice transcripts',
-    imageUrl: 'https://cdn.brandfetch.io/idRt0LuzRf/w/400/h/400/theme/dark/icon.jpeg?c=1dxbfHSJFAPEGdCLU4o5B',
+    imageUrl: '/integrations/hubspot.svg',
   },
 ];
 
@@ -161,12 +161,13 @@ export function Integrations() {
             >
               <div className="mb-1 flex h-12 w-12 items-center justify-center rounded-xl bg-surface-container-low text-primary">
                 {integration.imageUrl ? (
-                  // These vendor-hosted logos are tiny and intentionally stay remote.
-                  // eslint-disable-next-line @next/next/no-img-element
-                  <img
+                  <Image
                     src={integration.imageUrl}
                     alt={`${integration.name} logo`}
                     className="h-7 w-7 object-contain"
+                    width={28}
+                    height={28}
+                    loading="lazy"
                   />
                 ) : (
                   <Icon name={integration.icon} className="text-[28px]" />
