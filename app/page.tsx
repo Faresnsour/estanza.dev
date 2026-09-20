@@ -9,6 +9,7 @@ import DemoVideo from '@/components/DemoVideo/DemoVideo';
 import Pricing from '@/components/Pricing/Pricing';
 import Footer from '@/components/Footer/Footer';
 import ScrollAnimations from '@/components/ui/ScrollAnimations';
+import TryItLiveClient from '@/components/demo/TryItLive.client';
 
 export default function LandingPage() {
   const [isDemoPlaying, setIsDemoPlaying] = useState(false);
@@ -26,7 +27,15 @@ export default function LandingPage() {
           <Hero onWatchDemo={handleWatchDemo} />
           <ValueProp />
           <HowItWorks />
-          <DemoVideo isPlaying={isDemoPlaying} onPlayingChange={setIsDemoPlaying} />
+          <TryItLiveClient
+            id="demo"
+            sampleCallSlot={
+              <DemoVideo
+                isPlaying={isDemoPlaying}
+                onPlayingChange={setIsDemoPlaying}
+              />
+            }
+          />
           <Pricing />
           <section id="faq" className="w-full bg-surface-container-low py-16 lg:py-24">
             <div className="mx-auto max-w-4xl px-6 lg:px-8">
