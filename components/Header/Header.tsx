@@ -10,10 +10,11 @@ type NavLink = {
 };
 
 const NAV_LINKS: NavLink[] = [
-  { label: 'How It Works', href: '#how-it-works' },
-  { label: 'Capabilities', href: '#capabilities' },
-  { label: 'Integrations', href: '#integrations' },
-  { label: 'Pricing', href: '#pricing' },
+  { label: 'How It Works', href: '/#how-it-works' },
+  { label: 'Capabilities', href: '/#capabilities' },
+  { label: 'Integrations', href: '/#integrations' },
+  { label: 'Pricing', href: '/#pricing' },
+  { label: 'About', href: '/about' },
 ];
 
 export default function Header() {
@@ -51,7 +52,7 @@ export default function Header() {
 
         <div className="flex items-center gap-3">
           <a
-            href="#demo"
+            href="/#demo"
             className="hidden items-center px-2 py-1 font-body-md text-sm text-on-surface-variant transition-colors hover:text-on-surface md:inline-flex"
           >
             See Demo
@@ -59,7 +60,7 @@ export default function Header() {
 
           <button
             type="button"
-            onClick={() => openGetStarted('general')}
+            onClick={() => openGetStarted()}
             className="inline-flex items-center gap-1 rounded-lg bg-primary-container px-3.5 py-2 font-space text-sm font-bold text-on-primary-container transition-all hover:shadow-[0_4px_16px_rgba(0,209,178,0.4)] active:scale-[0.98]"
           >
             <span>Get Started</span>
@@ -95,7 +96,7 @@ export default function Header() {
             ))}
             <li>
               <a
-                href="#demo"
+                href="/#demo"
                 onClick={closeMenu}
                 className="block rounded-lg px-3 py-3 font-body-md text-sm text-on-surface-variant transition-colors hover:bg-surface-container hover:text-on-surface"
               >

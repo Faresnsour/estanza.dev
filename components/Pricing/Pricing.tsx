@@ -61,7 +61,7 @@ const PLANS: Plan[] = [
   },
 ];
 
-function PlanCard({ plan, onSelect }: { plan: Plan; onSelect?: (planId: PlanId) => void }) {
+function PlanCard({ plan, onSelect }: { plan: Plan; onSelect?: () => void }) {
   const isFeatured = plan.featured;
 
   return (
@@ -146,7 +146,7 @@ function PlanCard({ plan, onSelect }: { plan: Plan; onSelect?: (planId: PlanId) 
       <div className="pt-8">
         <button
           type="button"
-          onClick={() => onSelect?.(plan.id)}
+          onClick={() => onSelect?.()}
           className={
             isFeatured
               ? 'inline-flex w-full items-center justify-center gap-2 rounded-lg bg-primary-container py-3.5 font-space text-sm font-bold text-on-primary-container transition-all hover:shadow-[0_4px_24px_rgba(0,209,178,0.5)] active:scale-[0.99]'
@@ -165,7 +165,7 @@ export function FinalCta() {
   const { openGetStarted } = useGetStarted();
 
   return (
-    <section className="relative w-full overflow-hidden bg-inverse-surface py-20 text-inverse-on-surface lg:py-28">
+    <section id="book-a-call" className="relative w-full overflow-hidden bg-inverse-surface py-20 text-inverse-on-surface lg:py-28">
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(#00d1b2_1px,transparent_1px)] opacity-10 [background-size:24px_24px]" />
       <div className="relative z-10 mx-auto flex max-w-4xl flex-col items-center gap-4 px-6 text-center">
         <span className="rounded bg-white/10 px-3 py-1 font-mono-custom text-xs font-semibold uppercase tracking-widest text-primary-container">
@@ -182,7 +182,7 @@ export function FinalCta() {
         <div className="pt-2">
           <button
             type="button"
-            onClick={() => openGetStarted('general')}
+            onClick={() => openGetStarted()}
             className="inline-flex items-center gap-2 rounded-xl bg-primary-container px-8 py-4 font-space text-base font-bold text-on-primary-container transition-all hover:shadow-[0_8px_32px_rgba(0,209,178,0.4)] active:scale-[0.99]"
           >
             <span>Get Started</span>

@@ -46,7 +46,7 @@ export default function Hero({ onWatchDemo }: HeroProps) {
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <button
                 type="button"
-                onClick={() => openGetStarted('general')}
+                onClick={() => openGetStarted()}
                 className="inline-flex items-center gap-2 rounded-lg bg-primary-container px-6 py-3.5 font-space text-base font-bold text-on-primary-container transition-all hover:shadow-[0_4px_20px_rgba(0,209,178,0.4)] active:scale-[0.99]"
               >
 

@@ -15,9 +15,10 @@ const FOOTER_COLUMNS: FooterColumn[] = [
   {
     title: 'Navigation',
     links: [
-      { label: 'How It Works', href: '#how-it-works' },
-      { label: 'Pricing', href: '#pricing' },
-      { label: 'Live Demo', href: '#demo' },
+      { label: 'How It Works', href: '/#how-it-works' },
+      { label: 'Pricing', href: '/#pricing' },
+      { label: 'Live Demo', href: '/#demo' },
+      { label: 'About', href: '/about' },
     ],
   },
   {
@@ -27,6 +28,13 @@ const FOOTER_COLUMNS: FooterColumn[] = [
       { label: 'Terms of Service', href: '/terms' },
     ],
   },
+];
+
+const SOCIAL_LINKS = [
+  { label: 'Threads', href: 'https://www.threads.com/@estanza.dev', icon: 'forum' },
+  { label: 'Instagram', href: 'https://www.instagram.com/estanza.dev/', icon: 'camera_alt' },
+  { label: 'GitHub', href: 'https://github.com/estanzadev', icon: 'code' },
+  { label: 'X', href: 'https://x.com/EstanzaDev', icon: 'alternate_email' },
 ];
 
 const STATUS_BADGES = ['LATENCY < 350MS', 'SIP TRUNKING ACTIVE'];
@@ -64,27 +72,20 @@ export default function Footer() {
                 </span>
               ))}
             </div>
-            <a
-              href="https://www.instagram.com/estanza.dev"
-              target="_blank"
-              rel="noreferrer"
-              aria-label="Follow estanza.dev on Instagram"
-              className="mt-1 inline-flex w-fit items-center gap-2 text-sm text-on-surface-variant transition-colors hover:text-on-surface"
-            >
-              <svg
-                aria-hidden="true"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="1.8"
-                className="h-5 w-5"
-              >
-                <rect x="3" y="3" width="18" height="18" rx="5" />
-                <circle cx="12" cy="12" r="4" />
-                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
-              </svg>
-              Instagram
-            </a>
+            <div className="flex items-center gap-3 mt-2">
+              {SOCIAL_LINKS.map((social) => (
+                <a
+                  key={social.label}
+                  href={social.href}
+                  target="_blank"
+                  rel="noreferrer"
+                  aria-label={`Follow estanza.dev on ${social.label}`}
+                  className="inline-flex items-center justify-center w-9 h-9 rounded-full bg-surface-container text-on-surface-variant transition-colors hover:bg-surface-container-high hover:text-on-surface"
+                >
+                  <Icon name={social.icon} className="text-[18px]" />
+                </a>
+              ))}
+            </div>
           </div>
 
           {FOOTER_COLUMNS.map((column) => (

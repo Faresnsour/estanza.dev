@@ -234,7 +234,7 @@ export function Pipeline() {
           </div>
           <button
             type="button"
-            onClick={() => openGetStarted('general')}
+            onClick={() => openGetStarted()}
             className="inline-flex items-center gap-1 whitespace-nowrap rounded-lg bg-primary px-5 py-2.5 font-space text-sm font-bold text-on-primary shadow-sm transition-colors hover:bg-on-surface"
           >
             <span>Deploy Telephony</span>
