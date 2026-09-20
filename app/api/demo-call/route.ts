@@ -74,8 +74,9 @@ function clientIp(request: Request): string | undefined {
 
   const forwarded = request.headers.get("x-forwarded-for");
   if (forwarded) {
-    const first = forwarded.split(",")[0]?.trim();
-    if (first) return first;
+    const parts = forwarded.split(",").map((p) => p.trim()).filter(Boolean);
+    const last = parts[parts.length - 1];
+    if (last) return last;
   }
 
   const real = request.headers.get("x-real-ip")?.trim();
